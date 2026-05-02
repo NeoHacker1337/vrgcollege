@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Gallery</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #1e3a5f;
+            --primary-light: #2c5282;
+            --accent: #e67e22;
+            --bg: #f0f4f8;
+            --card-bg: #ffffff;
+            --text: #1a202c;
+            --text-muted: #718096;
+            --border: #e2e8f0;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: #fff;
+            padding: 36px 0;
+            margin-bottom: 28px;
+        }
+
+        .container {
+            width: min(1200px, 92%);
+            margin: 0 auto;
+        }
+
+        .header-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .back-link {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 14px;
+            border-radius: 10px;
+            background: rgba(255,255,255,0.14);
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 8px;
+        }
+
+        .section-subtitle {
+            color: rgba(255,255,255,0.88);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 18px;
+            padding-bottom: 40px;
+        }
+
+        .gallery-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.2s ease;
+        }
+
+        .gallery-card:hover { transform: translateY(-4px); }
+
+        .gallery-image {
+            width: 100%;
+            aspect-ratio: 4 / 3;
+            object-fit: cover;
+            display: block;
+        }
+
+        .gallery-caption {
+            padding: 14px;
+            font-weight: 600;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 22px 0 30px;
+            color: var(--text-muted);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-row">
+            <div>
+                <h1 class="section-title"><i class="fas fa-images"></i> Campus Gallery</h1>
+                <p class="section-subtitle">Highlights from academics, events, and campus life.</p>
+            </div>
+            <a class="back-link" href="index.html"><i class="fas fa-arrow-left"></i> Back to Notice Board</a>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="gallery-grid" aria-label="University gallery images">
+            <article class="gallery-card">
+                <img class="gallery-image" src="https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1200&q=80" alt="Students walking between university buildings">
+                <p class="gallery-caption">Main Academic Block</p>
+            </article>
+            <article class="gallery-card">
+                <img class="gallery-image" src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1200&q=80" alt="Graduation celebration on campus">
+                <p class="gallery-caption">Convocation Day</p>
+            </article>
+            <article class="gallery-card">
+                <img class="gallery-image" src="https://images.unsplash.com/photo-1519452575417-564c1401ecc0?auto=format&fit=crop&w=1200&q=80" alt="Students discussing in a modern library">
+                <p class="gallery-caption">Central Library</p>
+            </article>
+            <article class="gallery-card">
+                <img class="gallery-image" src="https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&w=1200&q=80" alt="Indoor sports arena with players">
+                <p class="gallery-caption">Sports Complex</p>
+            </article>
+            <article class="gallery-card">
+                <img class="gallery-image" src="https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?auto=format&fit=crop&w=1200&q=80" alt="Students at an auditorium event">
+                <p class="gallery-caption">Cultural Fest Evening</p>
+            </article>
+            <article class="gallery-card">
+                <img class="gallery-image" src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=1200&q=80" alt="Close view of books in a campus reading area">
+                <p class="gallery-caption">Reading Lounge</p>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        University Gallery • Capturing campus moments
+    </footer>
+</body>
+</html>
